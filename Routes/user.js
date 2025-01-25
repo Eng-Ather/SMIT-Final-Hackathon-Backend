@@ -86,7 +86,8 @@ userRoute.post("/signin", async (req, res) => {
     // Generating token
     var token = jwt.sign(user, process.env.JWT_SECRET);
     // console.log(token);
-    sendResponse(res, 200, { user, token }, null, "User login successfully");
+    // sendResponse(res, 200, { user, token },  "User login successfully", null);
+    sendResponse(res, 200, { user, token }, "User login successfully", null);
     return;
   } catch (error) {
     console.error("Error logging in user:", error);

@@ -5,3 +5,13 @@ export default function sendResponse(res, status, data, error, msg) {
       data: data,
     });
   }
+
+// -----------------
+
+// function sendResponse(res, status, data, message, error) {
+//   return res.status(status).json({
+//     data,
+//     message,
+//     error,
+//   });
+// }

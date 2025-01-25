@@ -7,6 +7,7 @@ import userRoute from "./Routes/user.js";
 
 dotenv.config(); // Load .env file
 
+
 const app = express();
 const port = 5000;
 
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 });
 
 // app routes
+app.use(cors())
 app.use(express.json());
 app.use("/user", userRoute);
 
